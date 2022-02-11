@@ -21,6 +21,7 @@ The goal is to identify whether the user has psoriasis or eczema, common skin co
  
 Known Issues:
 Trying to get the image placement correct
+Trying to get it to work on mobile
 
 -->
 
@@ -90,25 +91,28 @@ Trying to get the image placement correct
         max-width:90%;
         	}
 		
-</style> <!--these are the dimensions of the page-->
+</style> <!--these are the dimensions of the page and the image-->
 
 <body> <!--contains the content-->
 <div id="header" class="w3-container w3-flat-wet-asphalt"> <!--this shows what the header will look like-->
 	<h1>Eczema or Psoriasis?</h1> <!--top most heading on the page-->
+	
 </div> <!--divides the body-->
 	
 <div id="content" class="w3-container"> <!--the body of the page-->
-	<p>Are you wondering whether you have psoriasis or eczema? Answer a few short questions to find out!</p> 
-		<!--the page will display this text (<p> means paragraph)-->
+		<p>Are you wondering whether you have psoriasis or eczema? Answer a few short questions to find out!</p> 
+			<!--the page will display this text (<p> means paragraph)-->
 	
-	<a href="#one" class="w3-btn w3-ripple w3-black w3-hover-grey w3-round"> Get Started </a> 
-		<!--creates button to go to the second page. href links to the next page when clicked. class = look of the button.-->
+		<a href="#one" class="w3-btn w3-ripple w3-black w3-hover-grey w3-round"> Get Started </a> 
+			<!--creates button to go to the second page. href links to the next page when clicked. class = look of the button.-->
 	
 	<p>The following code has been developed by students and/or researchers of the Freshman Research Initiative DIY Diagnostics Stream at The University of Texas at 		Austin.  This code is shared for demonstration purposes and should not be considered a product -- it is for entertainment purposes only. Any user of this code 			does so at their own risk. Members of the DIY Stream, FRI, and The University of Texas system are not liable for anything related to this code.</p>
 
 	
 	<p>THIS CODE SHOULD NOT BE USED TO DIAGNOSE ANY KIND OF MEDICAL CONDITION.</p>
-	<img src="https://www.eczema.org.au/wp-content/uploads/2020/11/Eczema-vs-Psoriasis.jpg"> <!--adds an image using a link-->
+	
+		<img src="https://www.eczema.org.au/wp-content/uploads/2020/11/Eczema-vs-Psoriasis.jpg"> 
+			<!--adds an image using a link-->
 	
 	</div>
 	
@@ -120,13 +124,14 @@ Trying to get the image placement correct
 	</div>
 	
     	<div id="content" class="w3-container">
-        <p>Does your skin have raised, silvery, scaly patches?</p>  
-		<!--this is the first question-->
+        	<p>Does your skin have raised, silvery, scaly patches?</p>  
+			<!--this is the first question-->
 		
-	<a href="#two" onclick="psoriasisAdd();"class="w3-btn w3-ripple w3-black w3-hover-grey w3-round">Yes</a>
+		<a href="#two" onclick="psoriasisAdd();"class="w3-btn w3-ripple w3-black w3-hover-grey w3-round">Yes</a>
 		
-	<a href="#two" onclick="eczemaAdd();"class="w3-btn w3-ripple w3-black w3-hover-grey w3-round">No</a>
-		<!--both buttons will move to the next page while executing the functions when clicked-->
+		<a href="#two" onclick="eczemaAdd();"class="w3-btn w3-ripple w3-black w3-hover-grey w3-round">No</a>
+			<!--both buttons will move to the next page while executing the functions when clicked-->
+			<!--when clicked, it will either add 1 to psoriasis or eczema-->
 		
     	</div>
 </div>
@@ -137,13 +142,13 @@ Trying to get the image placement correct
 	</div>
 	
 	<div id="content" class="w3-container">
-	<p>Are there dry patches in the folds of your elbows or behind your knees?</p>
-		<!--second question-->
+		<p>Are there dry patches in the folds of your elbows or behind your knees?</p>
+			<!--second question-->
 	
-	<a href="#three" onclick="eczemaAdd();"class="w3-btn w3-ripple w3-black w3-hover-grey w3-round">Yes</a>
+		<a href="#three" onclick="eczemaAdd();"class="w3-btn w3-ripple w3-black w3-hover-grey w3-round">Yes</a>
 		
-	<a href="#three" onclick="psoriasisAdd();"class="w3-btn w3-ripple w3-black w3-hover-grey w3-round">No</a>
-		<!--both buttons will move to the next page while executing the functions when clicked-->
+		<a href="#three" onclick="psoriasisAdd();"class="w3-btn w3-ripple w3-black w3-hover-grey w3-round">No</a>
+			<!--both buttons will move to the next page while executing the functions when clicked-->
 		
 	</div>
 </div>	
@@ -154,13 +159,13 @@ Trying to get the image placement correct
 	</div>
 	
 	<div id="content" class="w3-container">
-	<p>Do the dry patches sting or burn?</p>
-		<!--third question-->
+		<p>Do the dry patches sting or burn?</p>
+			<!--third question-->
 		
-	<a href="#four" onclick="psoriasisAdd();"class="w3-btn w3-ripple w3-black w3-hover-grey w3-round">Yes</a>
+		<a href="#four" onclick="psoriasisAdd();"class="w3-btn w3-ripple w3-black w3-hover-grey w3-round">Yes</a>
 		
-	<a href="#four" onclick="eczemaAdd();"class="w3-btn w3-ripple w3-black w3-hover-grey w3-round">No</a>
-		<!--both buttons will move to the next page while executing the functions when clicked-->
+		<a href="#four" onclick="eczemaAdd();"class="w3-btn w3-ripple w3-black w3-hover-grey w3-round">No</a>
+			<!--both buttons will move to the next page while executing the functions when clicked-->
 	
 </div>
 	
@@ -170,13 +175,13 @@ Trying to get the image placement correct
 	</div>
 	
 	<div id="content" class="w3-container">
-	<p>Are the dry patches crusting or oozing?</p>
-		<!--fourth question-->
+		<p>Are the dry patches crusting or oozing?</p>
+			<!--fourth question-->
 		
-	<a href="#five" onclick="eczemaAdd();"class="w3-btn w3-ripple w3-black w3-hover-grey w3-round">Yes</a>
+		<a href="#five" onclick="eczemaAdd();"class="w3-btn w3-ripple w3-black w3-hover-grey w3-round">Yes</a>
 		
-	<a href="#five" onclick="psoriasisAdd();"class="w3-btn w3-ripple w3-black w3-hover-grey w3-round">No</a>
-		<!--both buttons will move to the next page while executing the functions when clicked-->
+		<a href="#five" onclick="psoriasisAdd();"class="w3-btn w3-ripple w3-black w3-hover-grey w3-round">No</a>
+			<!--both buttons will move to the next page while executing the functions when clicked-->
 	
 </div>
 		
@@ -186,12 +191,12 @@ Trying to get the image placement correct
 	</div>
 	
 	<div id="content" class="w3-container">
-	<p>Thank you for answering! Click to get your results</p>
+		<p>Thank you for answering! Click to get your results</p>
 		
-	<a onclick="results();"class="w3-btn w3-ripple w3-black w3-hover-grey w3-round">Results</a>
-		<!--when the button is clicked, the results function will be executed-->
-	<p id="results"></p> 
-		<!--the results will be changed due to the function in the beginning-->
+		<a onclick="results();"class="w3-btn w3-ripple w3-black w3-hover-grey w3-round">Results</a>
+			<!--when the button is clicked, the results function will be executed-->
+		<p id="results"></p> 
+			<!--the results will be changed due to the function in the beginning-->
 	
 </div>
 	
