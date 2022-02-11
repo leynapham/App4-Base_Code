@@ -23,7 +23,7 @@ Known Issues:
 -->
 
    <head> 
-   <title>Psoriasis or Eczema</title> <!-- this is the title of the webpage--> 
+   <title>Eczema or Psoriasis</title> <!-- this is the title of the webpage--> 
       <meta name="viewport" content="width=device-width, initial-scale=1">
       <meta name="apple-mobile-web-app-capable" content="yes"> 
 	   <!--information in here will not be displayed-->
@@ -34,28 +34,28 @@ Known Issues:
 
 
 <script> <!--embed code that will later be used to execute a function-->
-        var allergy_count = 0; 
-        var cold_count = 0; 
-		//allergy and cold variables are named. (var = variable)
+        var psoriasis_count = 0; 
+        var eczema_count = 0; 
+		//psoriasis and eczema variables are named. (var = variable)
 
 
-        function allergyAdd(){ 
-            allergy_count = allergy_count + 1; 
-		//the function is name allergyAdd. this will increase allergy_count by 1
+        function psoriasisAdd(){ 
+            psoriasis_count = psoriasis_count + 1; 
+		//the function is name psoriasisAdd. this will increase psoriasis_count by 1
         }
 
-        function coldAdd(){ 
-            cold_count = cold_count + 1; 
-		//the function is name coldAdd. this will increase cold_count by 1
+        function eczemaAdd(){ 
+           eczema_count = eczema_count + 1; 
+		//the function is name eczemaAdd. this will increase eczema_count by 1
         }
 
 	function results(){ 
-		var allergyPercent = (allergy_count/4)*100; 
-		var coldPercent = (cold_count/4)*100; 
-			//function to calculate percentage of both allergy and cold by dividing results by 4 and multipling by 100 
+		var psoriasisPercent = (psoriasis_count/4)*100; 
+		var eczemaPercent = (eczema_count/4)*100; 
+			//function to calculate percentage of both psoriasis and eczema by dividing results by 4 and multipling by 100 
 		var resultText = document.getElementById("results"); 
 			//this will later change "results" to actually display the results when calculated
-	resultText.innerHTML = "Probability it is allergies = " + allergyPercent +" <br> Probability it is a cold = " + coldPercent; 
+	resultText.innerHTML = "Probability it is psoriasis = " + psoriasisPercent +" <br> Probability it is a eczema = " + eczemaPercent; 
 			//this is how the results will be displayed in text
 	}
   </script>
@@ -86,11 +86,11 @@ Known Issues:
 
 <body> <!--contains the content-->
 <div id="header" class="w3-container w3-flat-wet-asphalt"> <!--this shows what the header will look like-->
-	<h1>Cold or Allergies?</h1> <!--top most heading on the page-->
+	<h1>Eczema or Psoriasis?</h1> <!--top most heading on the page-->
 </div> <!--divides the body-->
 	
 <div id="content" class="w3-container"> <!--the body of the page-->
-	<p>Are you feeling like you might have a cold but wonder if it is allergies. Answer a few short questions to find out!</p> 
+	<p>Are you feeling like you might have a eczema but wonder if it is psoriasis. Answer a few short questions to find out!</p> 
 		<!--the page will display this text (<p> means paragraph)-->
 	
 	<a href="#one" class="w3-btn w3-black w3-hover-grey w3-round"> Get Started </a> 
@@ -110,9 +110,9 @@ Known Issues:
         <p>Are your eyes watery or itchy?</p>  
 		<!--this is the first question-->
 		
-	<a href="#two" onclick="allergyAdd();"class="w3-btn w3-black w3-hover-grey w3-round">Yes</a>
+	<a href="#two" onclick="psoriasisAdd();"class="w3-btn w3-black w3-hover-grey w3-round">Yes</a>
 		
-	<a href="#two" onclick="coldAdd();"class="w3-btn w3-black w3-hover-grey w3-round">No</a>
+	<a href="#two" onclick="eczemaAdd();"class="w3-btn w3-black w3-hover-grey w3-round">No</a>
 		<!--both buttons will move to the next page while executing the functions when clicked-->
 		
     	</div>
@@ -127,9 +127,9 @@ Known Issues:
 	<p>Do you have a fever?</p>
 		<!--second question-->
 	
-	<a href="#three" onclick="coldAdd();"class="w3-btn w3-black w3-hover-grey w3-round">Yes</a>
+	<a href="#three" onclick="eczemaAdd();"class="w3-btn w3-black w3-hover-grey w3-round">Yes</a>
 		
-	<a href="#three" onclick="allergyAdd();"class="w3-btn w3-black w3-hover-grey w3-round">No</a>
+	<a href="#three" onclick="psoriasisAdd();"class="w3-btn w3-black w3-hover-grey w3-round">No</a>
 		<!--both buttons will move to the next page while executing the functions when clicked-->
 		
 	</div>
@@ -144,9 +144,9 @@ Known Issues:
 	<p>Do you have a sore throat?</p>
 		<!--third question-->
 		
-	<a href="#four" onclick="coldAdd();"class="w3-btn w3-black w3-hover-grey w3-round">Yes</a>
+	<a href="#four" onclick="eczemaAdd();"class="w3-btn w3-black w3-hover-grey w3-round">Yes</a>
 		
-	<a href="#four" onclick="allergyAdd();"class="w3-btn w3-black w3-hover-grey w3-round">No</a>
+	<a href="#four" onclick="psoriasisAdd();"class="w3-btn w3-black w3-hover-grey w3-round">No</a>
 		<!--both buttons will move to the next page while executing the functions when clicked-->
 	
 </div>
@@ -160,9 +160,9 @@ Known Issues:
 	<p>Are your symptoms seasonal or chronic?</p>
 		<!--fourth question-->
 		
-	<a href="#five" onclick="allergyAdd();"class="w3-btn w3-black w3-hover-grey w3-round">Yes</a>
+	<a href="#five" onclick="psoriasisAdd();"class="w3-btn w3-black w3-hover-grey w3-round">Yes</a>
 		
-	<a href="#five" onclick="coldAdd();"class="w3-btn w3-black w3-hover-grey w3-round">No</a>
+	<a href="#five" onclick="eczemaAdd();"class="w3-btn w3-black w3-hover-grey w3-round">No</a>
 		<!--both buttons will move to the next page while executing the functions when clicked-->
 	
 </div>
