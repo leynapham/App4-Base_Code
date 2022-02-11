@@ -6,8 +6,7 @@ THIS CODE SHOULD NOT BE USED TO DIAGNOSE ANY KIND OF MEDICAL CONDITION.
  
  
 Authors in chronological order of contribution:
-Author 1
-Author 2
+Leyna Pham
  
 Further Information:
 http://diystream.cns.utexas.edu/
@@ -17,15 +16,174 @@ Timothy Riedel
 triedel@utexas.edu
  
 Brief Description of Goal of Code:
-blah, blah, blah,
+
  
 Known Issues:
-blah, blah, blah, blah
+
 -->
 
    <head> 
-      
-	   PUT YOUR OLD CODE IN HERE
-	   
+   <title>Cold or Allergies</title>  
+      <meta name="viewport" content="width=device-width, initial-scale=1">
+      <meta name="apple-mobile-web-app-capable" content="yes"> 
+	   <!--information in here will not be displayed-->
+      <link rel="stylesheet" href="w3.css"> 
+      <link rel="stylesheet" href="w3-colors-flat.css">
+	   <!--link to other files-->
+   </head> 
+
+
+<script> <!--embed code that will later be used to execute a function-->
+        var allergy_count = 0; 
+        var cold_count = 0; 
+		//allergy and cold variables are named. (var = variable)
+
+
+        function allergyAdd(){ 
+            allergy_count = allergy_count + 1; 
+		//the function is name allergyAdd. this will increase allergy_count by 1
+        }
+
+        function coldAdd(){ 
+            cold_count = cold_count + 1; 
+		//the function is name coldAdd. this will increase cold_count by 1
+        }
+
+	function results(){ 
+		var allergyPercent = (allergy_count/4)*100; 
+		var coldPercent = (cold_count/4)*100; 
+			//function to calculate percentage of both allergy and cold by dividing results by 4 and multipling by 100 
+		var resultText = document.getElementById("results"); 
+			//this will later change "results" to actually display the results when calculated
+	resultText.innerHTML = "Probability it is allergies = " + allergyPercent +" <br> Probability it is a cold = " + coldPercent; 
+			//this is how the results will be displayed in text
+	}
+  </script>
+
+
+
+<style>	
+.body { 
+     margin: 0em;
+}
+
+.page {
+    width: 100vw;
+    height: 100vh;
+    position: fixed;
+    top: 0;
+    left: -100vw;
+    overflow-y: auto;
+    z-index: 0;
+    background-color: hsl(0,0%,100%);
+}
+
+  .page:target {
+    left: 0vw;
+    z-index: 1;
+}
+</style> <!--these are the dimensions of the page-->
+
+<body> <!--contains the content-->
+<div id="header" class="w3-container w3-flat-carrot"> <!--this shows what the header will look like-->
+	<h1>Cold or Allergies?</h1> <!--top most heading on the page-->
+</div> <!--divides the body-->
+	
+<div id="content" class="w3-container"> <!--the body of the page-->
+	<p>Are you feeling like you might have a cold but wonder if it is allergies. Answer a few short questions to find out!</p> 
+		<!--the page will display this text (<p> means paragraph)-->
+	
+	<a href="#one" class="w3-btn w3-black w3-hover-grey w3-round"> Get Started </a> 
+		<!--creates button to go to the second page. href links to the next page when clicked. class = look of the button.-->
+	
+	<p>The following code has been developed by students and/or researchers of the Freshman Research Initiative DIY Diagnostics Stream at The University of Texas at 		Austin.  This code is shared for demonstration purposes and should not be considered a product -- it is for entertainment purposes only. Any user of this code 			does so at their own risk. Members of the DIY Stream, FRI, and The University of Texas system are not liable for anything related to this code.</p>
+ 	
+	<p>THIS CODE SHOULD NOT BE USED TO DIAGNOSE ANY KIND OF MEDICAL CONDITION.</p>
+	</div>
+
+<div class="page" id="one"> <!--creates a page. id names the page "one"-->
+	<div id="header" class="w3-container w3-flat-carrot">
+		<h1>Question 1</h1>
+	</div>
+	
+    	<div id="content" class="w3-container">
+        <p>Are your eyes watery or itchy?</p>  
+		<!--this is the first question-->
+		
+	<a href="#two" onclick="allergyAdd();"class="w3-btn w3-black w3-hover-grey w3-round">Yes</a>
+		
+	<a href="#two" onclick="coldAdd();"class="w3-btn w3-black w3-hover-grey w3-round">No</a>
+		<!--both buttons will move to the next page while executing the functions when clicked-->
+		
+    	</div>
+</div>
+
+<div class="page" id="two">
+	<div id="header" class="w3-container w3-flat-carrot">
+		<h1>Question 2</h1>
+	</div>
+	
+	<div id="content" class="w3-container">
+	<p>Do you have a fever?</p>
+		<!--second question-->
+	
+	<a href="#three" onclick="coldAdd();"class="w3-btn w3-black w3-hover-grey w3-round">Yes</a>
+		
+	<a href="#three" onclick="allergyAdd();"class="w3-btn w3-black w3-hover-grey w3-round">No</a>
+		<!--both buttons will move to the next page while executing the functions when clicked-->
+		
+	</div>
+</div>	
+	
+<div class="page" id="three">
+	<div id="header" class="w3-container w3-flat-carrot">
+		<h1>Question 3</h1>
+	</div>
+	
+	<div id="content" class="w3-container">
+	<p>Do you have a sore throat?</p>
+		<!--third question-->
+		
+	<a href="#four" onclick="coldAdd();"class="w3-btn w3-black w3-hover-grey w3-round">Yes</a>
+		
+	<a href="#four" onclick="allergyAdd();"class="w3-btn w3-black w3-hover-grey w3-round">No</a>
+		<!--both buttons will move to the next page while executing the functions when clicked-->
+	
+</div>
+	
+<div class="page" id="four">
+	<div id="header" class="w3-container w3-flat-carrot">
+		<h1>Question 4</h1>
+	</div>
+	
+	<div id="content" class="w3-container">
+	<p>Are your symptoms seasonal or chronic?</p>
+		<!--fourth question-->
+		
+	<a href="#five" onclick="allergyAdd();"class="w3-btn w3-black w3-hover-grey w3-round">Yes</a>
+		
+	<a href="#five" onclick="coldAdd();"class="w3-btn w3-black w3-hover-grey w3-round">No</a>
+		<!--both buttons will move to the next page while executing the functions when clicked-->
+	
+</div>
+		
+<div class="page" id="five">
+	<div id="header" class="w3-container w3-flat-carrot">
+		<h1>Results</h1>
+	</div>
+	
+	<div id="content" class="w3-container">
+	<p>Thank you for answering! Click to get your results</p>
+		
+	<a onclick="results();"class="w3-btn w3-black w3-hover-grey w3-round">Results</a>
+		<!--when the button is clicked, the results function will be executed-->
+	<p id="results"></p> 
+		<!--the results will be changed due to the function in the beginning-->
+	
+</div>
+	
+<footer class="w3-bottom w3-container w3-flat-carrot"> <!--footer-->
+	<p>DIY!</p>
+</footer>	   
    </body>
 </html>
