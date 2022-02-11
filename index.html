@@ -81,7 +81,13 @@ Known Issues:
   .page:target {
     left: 0vw;
     z-index: 1;
+	  
 }
+  img, object{
+        max-height:90%;
+        max-width:90%;
+        	}
+
 </style> <!--these are the dimensions of the page-->
 
 <body> <!--contains the content-->
@@ -90,7 +96,7 @@ Known Issues:
 </div> <!--divides the body-->
 	
 <div id="content" class="w3-container"> <!--the body of the page-->
-	<p>Are you feeling like you might have a eczema but wonder if it is psoriasis. Answer a few short questions to find out!</p> 
+	<p>Are you wondering whether you have psoriasis or eczema? Answer a few short questions to find out!</p> 
 		<!--the page will display this text (<p> means paragraph)-->
 	
 	<a href="#one" class="w3-btn w3-ripple w3-black w3-hover-grey w3-round"> Get Started </a> 
@@ -100,7 +106,8 @@ Known Issues:
  	
 	<p>THIS CODE SHOULD NOT BE USED TO DIAGNOSE ANY KIND OF MEDICAL CONDITION.</p>
 	</div>
-
+	
+	
 <div class="page" id="one"> <!--creates a page. id names the page "one"-->
 	<div id="header" class="w3-container w3-flat-wet-asphalt">
 		<h1>Question 1</h1>
